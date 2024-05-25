@@ -19,16 +19,16 @@ const CardPokemon: React.FC<Props> = ({ pokemon }) => {
 
       <p className="text-black">Tipos</p>
       <div>
-        {pokemon?.types.map((type) => (
-          <p className="text-gray-500">{type.type.name}</p>
+        {pokemon?.types.map((type,i) => (
+          <p key={i} className="text-gray-500">{type.type.name}</p>
         ))}
       </div>
       <p>Experiemcia : {pokemon?.base_experience}</p>
 
       <p className="text-black">Habilidades</p>
       <div>
-        {pokemon?.abilities.map((ability) => (
-          <p className="text-gray-500">{ability.ability.name}</p>
+        {pokemon?.abilities.map((ability,i) => (
+          <p  key={i} className="text-gray-500">{ability.ability.name}</p>
         ))}
       </div>
 
